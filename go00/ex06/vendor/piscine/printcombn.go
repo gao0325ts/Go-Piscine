@@ -14,7 +14,7 @@ func PrintCombN(n int) {
 			for i := 0; i < n; i++ {
 				ft.PrintRune(prefix[i])
 			}
-			if prefix[0] != rune((10-n)+'0') {
+			if prefix[0] != rune((10 - n)+'0') {
 				ft.PrintRune(',')
 				ft.PrintRune(' ')
 			}
@@ -22,8 +22,8 @@ func PrintCombN(n int) {
 		}
 
 		for i := start; i <= 9; i++ {
-			prefix[cur_digit] = rune(i+'0')
-			PrintCombNRecursive(prefix, n, i+1, cur_digit+1)
+			prefix[cur_digit] = rune(i + '0')
+			PrintCombNRecursive(prefix, n, i + 1, cur_digit + 1)
 		}
 	}
 	var prefix [10]rune
