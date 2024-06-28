@@ -14,7 +14,7 @@ func PrintCombN(n int) {
 			for i := 0; i < n; i++ {
 				ft.PrintRune(prefix[i])
 			}
-			if prefix[0] != rune((10 - n)+'0') {
+			if prefix[0] != rune((10 - n) + '0') {
 				ft.PrintRune(',')
 				ft.PrintRune(' ')
 			}
