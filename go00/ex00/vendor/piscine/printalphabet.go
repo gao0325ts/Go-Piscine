@@ -5,8 +5,8 @@ import (
 )
 
 func PrintAlphabet() {
-	for c := 'a'; c <= 'z'; c++ {
-		ft.PrintRune(c)
+	for r := 'a'; r <= 'z'; r++ {
+		ft.PrintRune(r)
 	}
 	ft.PrintRune('\n')
 }
