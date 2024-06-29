@@ -1,5 +1,8 @@
 #!/bin/bash
 
+read -p "環境変数GOを入力してください: " GO
+read -p "環境変数EXを入力してください: " EX
+
 if [ -z "$GO" ]; then
     echo "エラー: 環境変数GOが設定されていません。"
     exit 1
