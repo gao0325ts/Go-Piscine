@@ -1,10 +1,5 @@
 package piscine
 
-import (
-	_ "ft"
-	_ "fmt"
-)
-
 func BasicAtoi2(s string) int {
 	var result int
 	num := []rune(s)
