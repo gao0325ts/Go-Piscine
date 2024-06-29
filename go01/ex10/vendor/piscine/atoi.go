@@ -1,10 +1,5 @@
 package piscine
 
-import (
-	_ "ft"
-	_ "fmt"
-)
-
 func Atoi(s string) int {
 	var result int
 	sign := 1

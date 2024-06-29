@@ -1,10 +1,5 @@
 package piscine
 
-import (
-	_ "ft"
-	_ "fmt"
-)
-
 func StrRev(s string) string {
 	runes := []rune(s)
 	length := len(runes)
