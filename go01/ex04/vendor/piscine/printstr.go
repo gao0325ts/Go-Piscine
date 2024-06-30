@@ -6,8 +6,8 @@ import (
 
 func PrintStr(s string) {
 	runes := []rune(s)
-	for i := 0; i < len(runes); i++ {
-		ft.PrintRune(runes[i])
+	for _, r := range runes {
+		ft.PrintRune(r)
 	}
 	ft.PrintRune('\n')
 }
