@@ -1,10 +1,5 @@
 package piscine
 
-import (
-	_ "ft"
-	_ "fmt"
-)
-
 func SortIntegerTable(table []int) {
 	var sorted bool
 	for sorted == false {
