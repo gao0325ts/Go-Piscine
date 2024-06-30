@@ -9,7 +9,8 @@ func PrintCombN(n int) {
 		return
 	}
 
-	PrintCombNRecursive := func(prefix []rune, n, start, cur_digit int) {
+	var PrintCombNRecursive func(prefix []rune, n, start, cur_digit int)
+	PrintCombNRecursive = func(prefix []rune, n, start, cur_digit int) {
 		if cur_digit == n {
 			for i := 0; i < n; i++ {
 				ft.PrintRune(prefix[i])
@@ -25,7 +26,9 @@ func PrintCombN(n int) {
 			PrintCombNRecursive(prefix, n, i+1, cur_digit+1)
 		}
 	}
+
 	var prefix [10]rune
 	PrintCombNRecursive(prefix[:], n, 0, 0)
+
 	ft.PrintRune('\n')
 }
