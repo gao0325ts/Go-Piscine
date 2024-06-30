@@ -18,4 +18,5 @@ func PrintComb2() {
 			}
 		}
 	}
+	ft.PrintRune('\n')
 }
