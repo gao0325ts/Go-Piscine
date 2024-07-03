@@ -17,3 +17,5 @@ func Index(s string, toFind string) int {
 	}
 	return -1
 }
+
+// TODO StrLen使わない方法の模索
