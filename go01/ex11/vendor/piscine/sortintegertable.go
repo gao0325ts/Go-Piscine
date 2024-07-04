@@ -4,11 +4,12 @@ func SortIntegerTable(table []int) {
 	var sorted bool
 	for sorted == false {
 		sorted = true
-		for i := 0; i < len(table) - 1; i++ {
-			if table[i] > table[i + 1] {
-				tmp := table[i]
-				table[i] = table[i + 1]
-				table[i + 1] = tmp
+		for i := range table {
+			if i == 0 {
+				continue
+			}
+			if table[i-1] > table[i] {
+				table[i-1], table[i] = table[i], table[i-1]
 				sorted = false
 			}
 		}
