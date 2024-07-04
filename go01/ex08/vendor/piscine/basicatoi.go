@@ -1,12 +1,19 @@
 package piscine
 
+func StrLen(s string) int {
+	var length int
+	for range []rune(s) {
+		length++
+	}
+	return length
+}
+
 func BasicAtoi(s string) int {
-	var result int
-	num := []rune(s)
-	for i := 0; i < len(num); i++ {
-		if '0' <= num[i] && num[i] <= '9' {
-			result = result * 10 + int(num[i] - '0')
+	var n int
+	for _, r := range []rune(s) {
+		if '0' <= r && r <= '9' {
+			n = n*10 + int(r-'0')
 		}
 	}
-	return result
+	return n
 }
