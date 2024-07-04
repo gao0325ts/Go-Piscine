@@ -1,9 +1,8 @@
 package piscine
 
 func StrLen(s string) int {
-	length := 0
-	runes := []rune(s)
-	for range runes {
+	var length int
+	for range []rune(s) {
 		length++
 	}
 	return length

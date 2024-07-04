@@ -5,8 +5,7 @@ import (
 )
 
 func PrintStr(s string) {
-	runes := []rune(s)
-	for _, r := range runes {
+	for _, r := range []rune(s) {
 		ft.PrintRune(r)
 	}
 	ft.PrintRune('\n')
