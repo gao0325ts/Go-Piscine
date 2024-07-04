@@ -5,8 +5,9 @@ func IterativeFactorial(nb int) int {
 		return 0
 	}
 	result := 1
+	maxInt := int(^uint(0) >> 1)
 	for i := 1; i <= nb; i++ {
-		if result < 0 {
+		if result > maxInt/i {
 			return 0
 		}
 		result *= i
