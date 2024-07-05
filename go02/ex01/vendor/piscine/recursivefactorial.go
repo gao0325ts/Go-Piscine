@@ -7,9 +7,9 @@ func RecursiveFactorial(nb int) int {
 		return 1
 	}
 	maxInt := int(^uint(0) >> 1)
-	next := RecursiveFactorial(nb - 1)
-	if next > 0 && nb > maxInt/next {
+	prev := RecursiveFactorial(nb - 1)
+	if next > 0 && nb > maxInt/prev {
 		return 0
 	}
-	return nb * next
+	return nb * prev
 }
