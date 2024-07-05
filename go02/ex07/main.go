@@ -8,6 +8,8 @@ import (
 func main() {
 	fmt.Println(piscine.FindNextPrime(5))
 	fmt.Println(piscine.FindNextPrime(4))
+
+	// --- Additional Tests ---
 	fmt.Println(piscine.FindNextPrime(-42))
 	fmt.Println(piscine.FindNextPrime(-1))
 	fmt.Println(piscine.FindNextPrime(0))

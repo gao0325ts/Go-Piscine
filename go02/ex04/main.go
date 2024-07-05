@@ -11,7 +11,7 @@ func main() {
 
 	// --- Additional Tests ---
 	fmt.Println(piscine.Fibonacci(-42)) // negative index
-	fmt.Println(piscine.Fibonacci(-1)) // negative index
+	fmt.Println(piscine.Fibonacci(-1))  // negative index
 	fmt.Println(piscine.Fibonacci(0))
 	fmt.Println(piscine.Fibonacci(1))
 	fmt.Println(piscine.Fibonacci(2))
