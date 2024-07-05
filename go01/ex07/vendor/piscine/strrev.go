@@ -1,6 +1,6 @@
 package piscine
 
-func StrLen(s string) int {
+func strLen(s string) int {
 	var length int
 	for range []rune(s) {
 		length++
