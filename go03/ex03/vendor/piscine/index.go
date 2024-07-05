@@ -1,12 +1,20 @@
 package piscine
 
+func strLen(s string) int {
+	var length int
+	for range []rune(s) {
+		length++
+	}
+	return length
+}
+
 func Index(s string, toFind string) int {
-	runes := []rune(s)
-	toFindRunes := []rune(toFind)
-	for i := range runes {
+	sLen := strLen(s)
+	toFindLen := strLen(toFind)
+	for i := 0; i <= sLen-toFindLen; i++ {
 		found := true
-		for j := range toFindRunes {
-			if runes[i+j] != toFindRunes[j] {
+		for j := 0; j < toFindLen; j++ {
+			if s[i+j] != toFind[j] {
 				found = false
 				break
 			}
@@ -17,5 +25,3 @@ func Index(s string, toFind string) int {
 	}
 	return -1
 }
-
-// TODO StrLen使わない方法の模索
