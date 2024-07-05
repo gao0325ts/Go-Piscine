@@ -1,9 +1,8 @@
 package piscine
 
 func LastRune(s string) rune {
-	runes := []rune(s)
 	var last rune
-	for _, r := range runes {
+	for _, r := range []rune(s) {
 		last = r
 	}
 	return last

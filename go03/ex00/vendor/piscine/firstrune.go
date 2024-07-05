@@ -1,8 +1,7 @@
 package piscine
 
 func FirstRune(s string) rune {
-	runes := []rune(s)
-	for _, r := range runes {
+	for _, r := range []rune(s) {
 		return r
 	}
 	return 0

@@ -1,8 +1,7 @@
 package piscine
 
 func NRune(s string, n int) rune {
-	runes := []rune(s)
-	for i, r := range runes {
+	for i, r := range []rune(s) {
 		if i == n {
 			return r
 		}
