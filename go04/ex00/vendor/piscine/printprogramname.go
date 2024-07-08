@@ -3,7 +3,10 @@ package piscine
 import "ft"
 
 func PrintProgramName(name string) {
-	for _, r := range name {
+	for i, r := range name {
+		if i <= 1 {
+			continue
+		}
 		ft.PrintRune(r)
 	}
 	ft.PrintRune('\n')
