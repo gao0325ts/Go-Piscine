@@ -1,16 +1,21 @@
 package piscine
 
-import "ft"
+import (
+	"ft"
+	"os"
+)
 
-func PrintParams(params []string) {
+func PrintParams() {
+	params := os.Args
 	for i, p := range params {
+		// Skip Program name
 		if i >= 1 {
-			printStr(p)
+			printStrln(p)
 		}
 	}
 }
 
-func printStr(s string) {
+func printStrln(s string) {
 	for _, r := range []rune(s) {
 		ft.PrintRune(r)
 	}
