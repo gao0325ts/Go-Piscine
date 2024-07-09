@@ -1,6 +1,8 @@
 package main
 
-import "piscine"
+import (
+	"piscine"
+)
 
 func main() {
 	a := piscine.SplitWhiteSpaces("Hello how are you?")

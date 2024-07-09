@@ -1,31 +1,39 @@
 package piscine
 
-import "ft"
+import (
+	"ft"
+)
 
 func SplitWhiteSpaces(s string) []string {
 	result := make([]string, 0)
-	var tmp string
-	var i int
-	for _, r := range s {
-		if r == ' ' {
-			result = append(result, tmp)
-			i++
-			tmp = ""
-			continue
+	var start int
+	var end int
+	for i, r := range s {
+		if r == ' ' || r == '\t' || r == '\n' {
+			if start == i {
+				result = append(result, "")
+			} else {
+				result = append(result, s[start:end])
+			}
+			start = i + 1
 		}
-		tmp += string(r)
+		end++
 	}
-	result = append(result, tmp)
+	if start < end {
+		result = append(result, s[start:end])
+	} else if start == end {
+		result = append(result, "")
+	}
 	return result
 }
 
 func PrintWordsTables(a []string) {
 	for _, s := range a {
-		printStr(s)
+		printStrln(s)
 	}
 }
 
-func printStr(s string) {
+func printStrln(s string) {
 	for _, r := range []rune(s) {
 		ft.PrintRune(r)
 	}
