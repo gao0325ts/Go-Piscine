@@ -1,4 +1,4 @@
-	package piscine
+package piscine
 
 import "ft"
 
@@ -23,9 +23,8 @@ func isValidBase(base string) bool {
 			if r == c {
 				return false
 			}
-			extChars += string(c)
 		}
-extChars += string(r)
+		extChars += string(r)
 	}
 	return true
 }
