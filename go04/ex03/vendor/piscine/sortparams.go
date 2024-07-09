@@ -5,13 +5,6 @@ import (
 	"os"
 )
 
-func printStrln(s string) {
-	for _, r := range []rune(s) {
-		ft.PrintRune(r)
-	}
-	ft.PrintRune('\n')
-}
-
 func SortParams() {
 	params := os.Args
 	var sorted bool
@@ -37,4 +30,11 @@ func SortParams() {
 		}
 		printStrln(p)
 	}
+}
+
+func printStrln(s string) {
+	for _, r := range []rune(s) {
+		ft.PrintRune(r)
+	}
+	ft.PrintRune('\n')
 }
