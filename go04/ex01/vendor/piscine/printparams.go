@@ -8,7 +8,7 @@ import (
 func PrintParams() {
 	params := os.Args
 	for i, p := range params {
-		// Skip Program name
+		// Skip the program name
 		if i >= 1 {
 			printStrln(p)
 		}
