@@ -2,7 +2,7 @@ package piscine
 
 func strLen(s string) int {
 	var length int
-	for range s {
+	for range []rune(s) {
 		length++
 	}
 	return length
@@ -27,12 +27,12 @@ func isValidBase(base string) bool {
 	return true
 }
 
-func Recursive(s, base string, len int) int {
+func BaseToInt(s, base string, len int) int {
 	var result int
 	for _, r := range s {
 		for i, b := range base {
 			if r == b {
-				result = result * len + i
+				result = result*len + i
 			}
 		}
 	}
@@ -55,5 +55,5 @@ func AtoiBase(s string, base string) int {
 		}
 	}
 	baseLen := strLen(base)
-	return Recursive(s, base, baseLen)
+	return BaseToInt(s, base, baseLen)
 }
