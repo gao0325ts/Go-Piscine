@@ -1,6 +1,9 @@
 package piscine
 
-import "ft"
+import (
+	"ft"
+	"os"
+)
 
 func compare(a, b string) int {
 	if a < b {
@@ -11,7 +14,8 @@ func compare(a, b string) int {
 	return 0
 }
 
-func SortParams(params []string) {
+func SortParams() {
+	params := os.Args
 	var sorted bool
 	for !sorted {
 		sorted = true
@@ -29,11 +33,11 @@ func SortParams(params []string) {
 		if i == 0 {
 			continue
 		}
-		printStr(p)
+		printStrln(p)
 	}
 }
 
-func printStr(s string) {
+func printStrln(s string) {
 	for _, r := range []rune(s) {
 		ft.PrintRune(r)
 	}

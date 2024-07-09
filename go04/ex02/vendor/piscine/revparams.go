@@ -1,18 +1,22 @@
 package piscine
 
-import "ft"
+import (
+	"ft"
+	"os"
+)
 
-func RevParams(params []string) {
+func RevParams() {
+	params := os.Args
 	var count int
 	for range params {
 		count++
 	}
 	for i := count - 1; i > 0; i-- {
-		printStr(params[i])
+		printStrln(params[i])
 	}
 }
 
-func printStr(s string) {
+func printStrln(s string) {
 	for _, r := range []rune(s) {
 		ft.PrintRune(r)
 	}
