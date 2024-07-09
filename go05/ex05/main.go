@@ -11,5 +11,5 @@ func main() {
 
 	// --- Additional Tests ---
 	fmt.Println(piscine.ConvertBase("256", "0123456789", "0123456789abcdef")) // 100
-	fmt.Println(piscine.ConvertBase("0", "01", "ABCDE")) // A
+	fmt.Println(piscine.ConvertBase("0", "01", "ABCDE"))                      // A
 }

@@ -5,18 +5,15 @@ func Split(s, sep string) []string {
 	sepLen := strLen(sep)
 	var start int
 	result := make([]string, 0)
-
 	for i := 0; i <= sLen-sepLen; i++ {
 		if s[i:i+sepLen] == sep {
 			result = append(result, s[start:i])
 			start = i + sepLen
 		}
 	}
-
 	if start <= sLen {
 		result = append(result, s[start:])
 	}
-
 	return result
 }
 

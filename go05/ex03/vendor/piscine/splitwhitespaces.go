@@ -15,10 +15,8 @@ func SplitWhiteSpaces(s string) []string {
 		}
 		end++
 	}
-	if start == end {
-		result = append(result, "")
-	} else if start < end {
-		result = append(result, s[start:end])
+	if start <= end {
+		result = append(result, s[start:])
 	}
 	return result
 }

@@ -1,20 +1,20 @@
 package piscine
 
 func ConcatParams(args []string) string {
-	result := make([]string, 0)
+	parts := make([]string, 0)
 	for i, arg := range args {
 		if i > 0 {
-			result = append(result, "\n")
+			parts = append(parts, "\n")
 		}
-		result = append(result, arg)
+		parts = append(parts, arg)
 	}
-	return joinString(result)
+	return joinStrings(parts)
 }
 
-func joinString(s []string) string {
-	var output string
+func joinStrings(s []string) string {
+	var result string
 	for _, str := range s {
-		output += str
+		result += str
 	}
-	return output
+	return result
 }
