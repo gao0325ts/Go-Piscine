@@ -5,15 +5,6 @@ import (
 	"os"
 )
 
-func compare(a, b string) int {
-	if a < b {
-		return -1
-	} else if a > b {
-		return 1
-	}
-	return 0
-}
-
 func printStrln(s string) {
 	for _, r := range []rune(s) {
 		ft.PrintRune(r)
@@ -32,7 +23,7 @@ func SortParams() {
 			if i <= 1 {
 				continue
 			}
-			if compare(params[i-1], params[i]) > 0 {
+			if params[i-1] > params[i] {
 				params[i-1], params[i] = params[i], params[i-1]
 				sorted = false
 			}

@@ -9,9 +9,10 @@ func PrintParams() {
 	params := os.Args
 	for i, p := range params {
 		// Skip the program name
-		if i >= 1 {
-			printStrln(p)
+		if i == 0 {
+			continue
 		}
+		printStrln(p)
 	}
 }
 
