@@ -17,5 +17,5 @@ func main() {
 	fmt.Println(piscine.AtoiBase("7D", "+0123456789ABCDEF"))
 	fmt.Println(piscine.AtoiBase("7D", "-0123456789ABCDEF"))
 	fmt.Println(piscine.AtoiBase("7D", "00123456789ABCDEF"))
-	fmt.Println(piscine.AtoiBase("7D", "00123456789ABCDEF"))
+	fmt.Println(piscine.AtoiBase("0", "00123456789ABCDEF"))
 }

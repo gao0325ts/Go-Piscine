@@ -26,7 +26,7 @@ func main() {
 	ft.PrintRune('\n')
 	piscine.PrintNbrBase(125, "")
 	ft.PrintRune('\n')
-	piscine.PrintNbrBase(9, "0123456789")
+	piscine.PrintNbrBase(0, "0123456789")
 	ft.PrintRune('\n')
 	piscine.PrintNbrBase(10, "0123456789")
 	ft.PrintRune('\n')
